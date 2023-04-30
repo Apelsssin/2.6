@@ -2,11 +2,17 @@
 #include "Figure.h"
 class Quadrangle : public Figure {
 protected:
+	int a;
+	int b;
+	int c;
+	int A;
+	int B;
+	int C;
 	int d;
 	int D;
 public:
-	Quadrangle(std::string name, int a, int b, int c, int d, int A, int B, int C, int D) {
-		this->name = "четырехугольник";
+	Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D) {
+		this->name = "Четырехугольник";
 		this->a = a;
 		this->b = b;
 		this->c = c;
@@ -15,9 +21,9 @@ public:
 		this->B = B;
 		this->C = C;
 		this->D = D;
+		this->sides = 4;
 	}
-	Quadrangle() : Quadrangle("четырехугольник", 10, 20, 30, 40, 50, 60, 70, 80) { ; }
-	void set(std::string name, int a, int b, int c, int d, int A, int B, int C, int D);
+	Quadrangle() : Quadrangle(10, 20, 30, 40, 50, 60, 70, 80) { ; }
 	std::string get_name();
 	int get_a();
 	int get_b();
@@ -27,4 +33,6 @@ public:
 	int get_B();
 	int get_C();
 	int get_D();
+
+	void print() override;
 };

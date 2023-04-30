@@ -3,20 +3,13 @@
 class Figure {
 protected:
 	std::string name;
-	int a;
-	int b;
-	int c;
-	int A;
-	int B;
-	int C;
+	int sides;
 public:
+	int get_sides();
+	std::string get_name();
 	Figure() {
 		name = "Фигура";
-		a = 0;
-		b = 0;
-		c = 0;
-		A = 0;
-		B = 0;
-		C = 0;
+		sides = 0;
 	}
+	virtual void print();
 };
